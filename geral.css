@@ -1,4 +1,4 @@
-/*--------- PADRÃO ---------*/
+/*--------- PADRÃO PARA TODAS PÁGINAS ---------*/
 :root {
     --cor01: #000;
     --cor02: #732020;
@@ -26,7 +26,6 @@ body {
     flex-direction: column;
 }
 
-
 .menu_top {
     background-color: var(--cor01);
     padding: 10px 0;
@@ -50,33 +49,32 @@ body {
 }
 
 .logoimg {
-
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-    width: 260px; 
-    height: 230px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 230px;
 }
 
 .redes-sociais {
     display: flex;
     align-items: center;
-    justify-content: flex-end; 
-    padding: 10px; 
+    justify-content: flex-end;
+    padding: 10px;
 }
 
 .telefone {
     color: white;
-    margin-right: 10px; 
-    font-size: 14px; 
+    margin-right: 10px;
+    font-size: 14px;
 }
 
 .redes-sociais img {
-    width: 30px; 
+    width: 30px;
     height: auto;
-    margin-left: 0px; 
+    margin-left: 0px;
     margin-right: 30px;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .redes-sociais:hover {
@@ -101,47 +99,63 @@ footer ul {
 footer ul li {
     margin-bottom: 5px;
 }
-/*-------- FIM -------*/
 
+/* Responsividade geral */
+@media (max-width: 768px) {
+    .cabeçalho {
+        height: auto;
+    }
+    
+    .logoimg {
+        width: 80%;
+        height: auto;
+    }
+    
+    .redes-sociais {
+        justify-content: center;
+    }
+    
+    .redes-sociais img {
+        margin-right: 10px;
+    }
+}
 
 /*--------- HOME ---------*/
 .corpo {
     background-color: #01080e;
     color: white;
- }
+}
 
- .titulo_home {
+.titulo_home {
     font-size: 50px;
     text-align: center;
     margin: 30px 0 10px 0;
     color: var(--cor02);
     text-decoration: overline underline;
- }
+}
 
- .paragrafo_titulo {
+.paragrafo_titulo {
     font-size: 18px;
     text-align: center;
     margin-bottom: 30px;
- }
+}
 
- .conteudo {
+.conteudo {
     padding: 20px;
 }
 
 .sections {
-    display: flex; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-right: 50px;
     padding: 10px;
 }
 
-
 .imagem_carne {
     height: 400px;
     width: 700px;
     border-radius: 10%;
-
 }
 
 .imagem_carne:hover, .imagem_queijos:hover, .imagem_vinho:hover, .imagem_açougue:hover {
@@ -162,7 +176,7 @@ footer ul li {
 }
 
 .paragrafo_conteudo {
-    font-size: 18px; 
+    font-size: 18px;
     margin: 10px 0 30px 0;
 }
 
@@ -190,15 +204,13 @@ footer ul li {
 }
 
 .imagem_queijos, .imagem_vinho {
-    height:450px;
+    height: 450px;
     width: 650px;
     margin: 10px 0 30px 90px;
     border-radius: 10%;
 }
 
-
-.titulo_produtos { 
-    
+.titulo_produtos {
     font-size: 30px;
     text-align: center;
     margin: 30px 0 30px 0;
@@ -221,7 +233,19 @@ footer ul li {
     padding-top: 50px;
 }
 
-/*-------- FIM -------*/
+/* Responsividade para a página Home */
+@media (max-width: 768px) {
+    .imagem_carne, .imagem_açougue, .imagem_queijos, .imagem_vinho {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .sections {
+        margin-right: 0;
+        padding: 5px;
+    }
+}
 
 /*--------- PRODUTOS ---------*/
 .produtos_corpo {
@@ -229,8 +253,8 @@ footer ul li {
     color: #dadde0;
     width: 100vw;
     font-size: 1rem;
-  }
-  
+}
+
 body > div {
     padding: 40px 0;
 }
@@ -240,16 +264,15 @@ body > div {
     top: 0;
     background-color: var(--cor02);
     padding: 30px;
-    width: 10%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.525) ;
+    width: 15%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.525);
 }
 
 .menu_lateral__lista {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 200px;
- 
+    width: 100%;
 }
 
 .menu_lateral__paragrafo {
@@ -262,13 +285,12 @@ body > div {
     color: white;
     text-decoration: none;
     font-size: 18px;
-
 }
 
 .menu_lateral__link:hover {
     color: black;
 }
-  
+
 .stretch {
     justify-content: space-around;
 }
@@ -277,7 +299,6 @@ body > div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 600px);
-    
 }
 
 .item {
@@ -297,11 +318,10 @@ h1 {
     border-radius: 15%;
     width: 350px;
     height: 450px;
-    
 }
 
 .produtos_imagens:hover {
-    transform: scale(1.15)
+    transform: scale(1.15);
 }
 
 .produtos_titulo {
@@ -318,56 +338,86 @@ h1 {
     font-size: 2rem;
     text-align: center;
     text-decoration: underline; color: #000;
-    color: var(--cor03)
+    color: var(--cor03);
 }
-/*-------- FIM -------*/
 
+/* Responsividade para a página Produtos */
+@media (max-width: 1024px) {
+    .menu_lateral {
+        width: 25%;
+    }
+
+    .justify-items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 400px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu_lateral {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .justify-items {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .produtos_imagens {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
 
 /*--------- RECEITAS ---------*/
-.corpo_receitas{
+.corpo_receitas {
     background-color: #01080e;
     color: white;
 }
 
-main{
-    margin:10px;
+main {
+    margin: 10px;
 }
 
-#titulo_receitas{
+#titulo_receitas {
     color: #A63429;
     text-align: center;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 3px#0000005a;
+    text-shadow: 1px 1px 3px #0000005a;
 }
 
-.titulo_vermelho{
+.titulo_vermelho {
     color: #A63429;
     margin: 10px 0px 10px 0px;
 }
 
-.titulo_comida{
+.titulo_comida {
     background-color: #A63429;
     color: #D9C179;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.512);
     margin: 10px;
+    margin-top: 50px;
     padding: 10px;
     text-align: center;
+    font-size: 35px;
 }
 
-.foto_comida{
+.foto_comida {
     display: block;
     margin: auto;
     width: 460px;
     height: auto;
     border-radius: 10%;
-    
 }
 
 .foto_comida:hover {
     transform: scale(1.15);
 }
 
-#receitas_top{
+#receitas_top {
     margin: 10px;
     padding: 30px;
     background-color: #D9C179;
@@ -378,53 +428,64 @@ main{
     margin: auto;
 }
 
-#receitas_top p{
+#receitas_top p {
     text-align: center;
     margin: 10px;
 }
 
-.lista_receita{
+.lista_receita {
     list-style-type: none;
     line-height: 2;
-
 }
 
-.lista_receita_link{
+.lista_receita_link {
     color: #A63429;
     text-decoration: none;
 }
 
-
-.lista_receita_link:hover{
+.lista_receita_link:hover {
     color: #732020;
     text-decoration: underline;
 }
 
-
-.bloco_receitas{
+.bloco_receitas {
     margin: 10px;
-
+    display: flex;
+    justify-content: space-around;
 }
 
-.preparo{
+.preparo {
     margin: 20px;
-    
 }
 
-.ingredientes{
-    margin: 20px;   
-
+.ingredientes {
+    margin: 20px;
 }
 
- /*-------- FIM -------*/
+/* Responsividade para a página Receitas */
+@media (max-width: 768px) {
+    .foto_comida {
+        width: 80%;
+        height: auto;
+    }
 
- /*--------- HISTÓRIA ---------*/
-.corpo_historia{
+    #receitas_top {
+        width: 80%;
+    }
+
+    .bloco_receitas {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*--------- HISTÓRIA ---------*/
+.corpo_historia {
     background-color: #01080e;
     color: white;
 }
 
-#titulo_historia{
+#titulo_historia {
     background-color: #A63429;
     color: #D9C179;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.512);
@@ -433,8 +494,8 @@ main{
     text-align: center;
 }
 
-.texto_principal_historia{
-    line-height: 1,7;
+.texto_principal_historia {
+    line-height: 1.7;
     margin: 0px 10px 0px 10px;
     text-align: justify;
     margin: 20px;
@@ -449,18 +510,30 @@ main{
 .imagem_açougue_historia:hover {
     transform: scale(1.15);
 }
-.historia_imagem{
-    display: flex; 
-    flex-wrap: wrap; 
+
+.historia_imagem {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-right: 50px;
     padding: 10px;
 }
 
- /*-------- FIM -------*
+/* Responsividade para a página História */
+@media (max-width: 768px) {
+    .imagem_açougue_historia {
+        width: 100%;
+        height: auto;
+    }
 
- /*--------- CONTATOS ---------*/
-.titulo_contato{
+    .historia_imagem {
+        margin-right: 0;
+        padding: 5px;
+    }
+}
+
+/*--------- CONTATOS ---------*/
+.titulo_contato {
     color: var(--cor02);
     font-size: 50px;
     text-align: center;
@@ -474,10 +547,9 @@ main{
     margin: 35px 250px 10px 15px;
 }
 
-.titulo_whats, .titulo_face{
+.titulo_whats, .titulo_face {
     margin: 35px 250px 10px 15px;
 }
-
 
 .corpo_contato {
     background-color: #01080e;
@@ -495,9 +567,9 @@ main{
     margin: 150px;
 }
 
-.titulo_face, .titulo_whats, .telefones_bloco, .titulo_contato__instagram{
+.titulo_face, .titulo_whats, .telefones_bloco, .titulo_contato__instagram {
     font-size: 25px;
-    color: var(--cor05)
+    color: var(--cor05);
 }
 
 .imagem_insta, .imagem_face, .imagem_whats {
@@ -508,7 +580,6 @@ main{
 .imagem_insta:hover, .imagem_face:hover, .imagem_whats:hover {
     transform: scale(1.30);
 }
-
 
 .telefone_paragrafo {
     font-size: 15px;
@@ -521,14 +592,27 @@ main{
     padding: 15px;
     color: var(--cor03);
 }
-.endereço_loja{
+
+.endereço_loja {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50px;
 }
 
+/* Responsividade para a página Contatos */
+@media (max-width: 768px) {
+    .espaçamento_contato {
+        flex-direction: column;
+        margin: 50px;
+    }
 
+    .titulo_contato__instagram, .titulo_whats, .titulo_face {
+        margin: 20px 0;
+    }
 
-
-/*-------- FIM -------*/
+    .imagem_insta, .imagem_face, .imagem_whats {
+        width: 80px;
+        height: 80px;
+    }
+}
